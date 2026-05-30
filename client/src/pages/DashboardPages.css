@@ -1,0 +1,339 @@
+/* === Dashboard Pages === */
+.dashboard-page {}
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.dashboard-stats {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.dashboard-content {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-12);
+}
+
+/* Employer Jobs List */
+.employer-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.employer-job-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.employer-job-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.employer-job-info h3 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.employer-job-info h3 a {
+  color: var(--color-text-primary);
+  transition: color var(--transition-fast);
+}
+
+.employer-job-info h3 a:hover {
+  color: var(--color-accent-blue-light);
+}
+
+.job-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.employer-job-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* Job Post Form */
+.job-form-container {
+  padding: var(--space-8);
+}
+
+.job-form-container h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin-bottom: var(--space-6);
+}
+
+.salary-group {
+  margin-bottom: var(--space-5);
+}
+
+.salary-group .form-label {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.salary-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.salary-dash {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.salary-period {
+  flex-shrink: 0;
+  width: 120px !important;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+/* Applicants */
+.applicants-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.applicants-header h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.applicants-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.applicant-card {
+  display: flex;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.applicant-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.applicant-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.applicant-info h4 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.applicant-email {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.applicant-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.cover-letter-preview {
+  background: rgba(10, 14, 26, 0.5);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+}
+
+.cover-letter-preview strong {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.cover-letter-preview p {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.applicant-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-end;
+  min-width: 140px;
+}
+
+.status-select {
+  font-size: var(--font-size-xs) !important;
+  padding: var(--space-2) var(--space-3) !important;
+}
+
+/* Applications List (Candidate) */
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.application-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.application-job-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.application-job-info h3 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.application-job-info h3 a {
+  color: var(--color-text-primary);
+  transition: color var(--transition-fast);
+}
+
+.application-job-info h3 a:hover {
+  color: var(--color-accent-blue-light);
+}
+
+.application-status {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-end;
+}
+
+/* Profile */
+.profile-form-container {
+  padding: var(--space-8);
+}
+
+.profile-form-container h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin-bottom: var(--space-6);
+}
+
+.profile-avatar-section {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.profile-avatar-lg {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.profile-avatar-section h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.profile-avatar-section p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: var(--space-1) 0 var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .employer-job-row,
+  .application-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .applicant-actions {
+    align-items: flex-start;
+  }
+
+  .application-status {
+    align-items: flex-start;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .salary-row {
+    flex-wrap: wrap;
+  }
+}
