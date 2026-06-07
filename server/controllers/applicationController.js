@@ -42,7 +42,7 @@ exports.applyForJob = async (req, res, next) => {
       job: jobId,
       applicant: req.user.id,
       coverLetter,
-      resumePath: req.file.path,
+      resumePath: `uploads/resumes/${req.file.filename}`,
       resumeOriginalName: req.file.originalname,
     });
 

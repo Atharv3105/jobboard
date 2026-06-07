@@ -423,7 +423,7 @@ const EmployerDashboard = () => {
                         {app.status}
                       </span>
 
-                      <a href={`http://localhost:5000/${app.resumePath?.replace(/\\/g, '/')}`}
+                      <a href={`${(import.meta.env.VITE_API_URL || 'http://localhost:5000/api').replace('/api', '')}/uploads/resumes/${app.resumePath?.split(/[/\\]/).pop()}`}
                         target="_blank" rel="noopener noreferrer"
                         className="btn btn-secondary btn-sm">
                         📄 View Resume
