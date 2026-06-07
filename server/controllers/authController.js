@@ -16,12 +16,12 @@ exports.register = async (req, res, next) => {
       company: role === 'employer' ? company : undefined,
     });
 
-    // Send welcome email
-    await sendEmail({
+    // Send welcome email asynchronously so it doesn't block the response
+    sendEmail({
       to: email,
       subject: '🎉 Welcome to JobBoard!',
       text: `Hi ${name},\n\nWelcome to JobBoard! Your account has been created successfully as a ${role || 'candidate'}.\n\nStart ${role === 'employer' ? 'posting jobs' : 'exploring jobs'} today!\n\nBest,\nThe JobBoard Team`,
-    });
+    }).catch(err => console.error(`Failed to send welcome email to ${email}:`, err.message));
 
     sendTokenResponse(user, 201, res);
   } catch (error) {
